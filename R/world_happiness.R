@@ -13,19 +13,19 @@
 #'   \item{perceptions_of_corruption}{s corruption widespread throughout the government or not?}
 #'   \item{positive_affect}{whether they smiled or laughed a lot yesterday}
 #'   \item{negative_affect}{experienced specific negative emotions during a lot of the day yesterday}
-#'   \item{confidence_in_national_government}
-#'   \item{democratic_quality}
-#'   \item{delivery_quality}
-#'   \item{gini_index_world_bank_estimate}
-#'   \item{gini_index_world_bank_estimate_average_2000_16}
-#'   \item{gini_of_household_income_reported_in_gallup_by_wp5_year}
-#'   \item{most_people_can_be_trusted_gallup}
-#'   \item{most_people_can_be_trusted_wvs_round_1981_1984}
-#'   \item{most_people_can_be_trusted_wvs_round_1989_1993}
-#'   \item{most_people_can_be_trusted_wvs_round_1994_1998}
-#'   \item{most_people_can_be_trusted_wvs_round_1999_2004}
-#'   \item{most_people_can_be_trusted_wvs_round_2005_2009}
-#'   \item{most_people_can_be_trusted_wvs_round_2010_2014}
+#'   \item{confidence_in_national_government}{}
+#'   \item{democratic_quality}{}
+#'   \item{delivery_quality}{}
+#'   \item{gini_index_world_bank_estimate}{}
+#'   \item{gini_index_world_bank_estimate_average_2000_16}{}
+#'   \item{gini_of_household_income_reported_in_gallup_by_wp5_year}{}
+#'   \item{most_people_can_be_trusted_gallup}{}
+#'   \item{most_people_can_be_trusted_wvs_round_1981_1984}{}
+#'   \item{most_people_can_be_trusted_wvs_round_1989_1993}{}
+#'   \item{most_people_can_be_trusted_wvs_round_1994_1998}{}
+#'   \item{most_people_can_be_trusted_wvs_round_1999_2004}{}
+#'   \item{most_people_can_be_trusted_wvs_round_2005_2009}{}
+#'   \item{most_people_can_be_trusted_wvs_round_2010_2014}{}
 #' }
 #'
 #' From the authors: "The World Happiness Report is a landmark survey of the state of global happiness. The World Happiness Report 2018, ranks 156 countries by their happiness levels, and 117 countries by the happiness of their immigrants. The main focus of this year’s report, in addition to its usual ranking of the levels and changes in happiness around the world, is on migration within and between countries."
