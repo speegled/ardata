@@ -1,0 +1,17 @@
+V1-V36,Baseline evaluation of the 36 ideographs,
+baseline_mean,aean of the baseine evaluations,
+PASSIVE_OR_ACTIVE_FIRST,passive or active condition first,1=passive first
+PASSIVE_MIDDLE,"mean of the differences from baseline evaluation in passive movement type, out movement direction",
+PASSIVE_OUT,"mean of the differences from baseline evauation in passive movement type, out movement direction ",
+PASSIVE_IN,"mean of the differences from baseline evaluation in passive movement type, in movement direction",
+ACTIVE_MIDDLE,"mean of the differences from baseline evaluation in active movement type, middle movement direction",
+ACTIVE_OUT,"mean of the differences from baseline evaluation in active movement type, out movement direction",
+ACTIVE_IN,"mean of the differences from baseline evaluation in active movement type, in movement direction",
+Sex,sex of the participant,"0=male, 1=female"
+Age,age in years of the participant,
+PANAS_STATE_1-PANAS_STATE_20,Items of the PANAS questionnaire,
+PA_STATE,Panas State Positive Affectivity,
+NA_STATE,Panas State Negative Affectivity,
+PANAS_TRAIT_1-PANAS_TRAIT_21,Items of the PANAS Questionnaire,
+PA_TRAIT,Panas Trait Positive Affectivity,
+NA_TRAIT,Panas Trait Negative Affectivity,
