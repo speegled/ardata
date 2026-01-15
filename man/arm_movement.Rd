@@ -12,8 +12,8 @@ A data frame with 56 observations of 11 variables.
   \item{baseline_mean}{mean score of characters under neutral conditions}
   \item{passive_*}{difference in score of characters when arm was passively moving in direction indicated}
   \item{active_*}{difference in score of characters when arm was actively moving in direction indicated}
-  \item{sex}{0=male, 1=femal}
-  \item age{integer, years}
+  \item{sex}{0=male, 1=female}
+  \item{age}{integer, years}
 }
 
 From the authors: "Previous research showed that the activation of the arm extensor muscles is associated with a more negative attitude. In contrast, arm flexor muscle activation is associated with a more positive one. However, most of the studies tested these effects with isometric activation of the muscles. The current study was conducted to test if these effects occur with actual passive and active forearm movement."
