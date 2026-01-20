@@ -26,6 +26,6 @@ running_speed <- data.frame(
   )
 )
 
-save(running_speed, file = "data/running_speed.Rda")
+save(running_speed, file = "data/running_speed.rda")
 
 #run regression on top speed as described by foot velocity, for example
