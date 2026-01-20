@@ -18,4 +18,4 @@
 #' From the authors: "Negative foot speed (i.e., the speed of the backward and downward motion of the foot relative to the body at ground contact) is a strong predictor of sprinting performance. Inertial measurement units (IMUs) are becoming a popular approach for assessing sports performance. The primary aim of this study was to use IMUs to investigate the relationship between negative foot speed and top running speed attained during a sprint on an outdoor track."
 #'
 #' @source https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0303920
-"running_speed"
+"running"

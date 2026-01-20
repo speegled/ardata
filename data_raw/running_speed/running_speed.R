@@ -1,4 +1,4 @@
-running_speed <- data.frame(
+running <- data.frame(
   ID = 1:17,
   stride_length_m = c(
     4.08, 4.18, 4.27, 3.40, 3.53, 4.17, 4.38, 4.03, 4.07,
@@ -26,6 +26,6 @@ running_speed <- data.frame(
   )
 )
 
-save(running_speed, file = "data/running_speed.rda")
+save(running, file = "data/running.rda")
 
 #run regression on top speed as described by foot velocity, for example
