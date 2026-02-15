@@ -1,0 +1,87 @@
+Data from 
+
+The file named "analysis script" contains the analysis R code. Analyses are run on two databases:
+- "db total" is the main database;
+- "dt2.noout" is the long format database for the proprioceptive drift analysis; here, we have each pointing trial instead of the averaged score.
+
+Databases' codebooks follow.
+
+
+-db total codebook-
+
+ID = subject's id
+initials = subject's initials (removed to anonymise the data)
+age = subject's age
+education_level	 = subject's years of school
+sex = subject's gender
+handedness = subject's handedness
+order = order of administration of all conditions for each participant (L = co-location FBI; Lo = dislocation FBI; A = co-location RHI; Ao = dislocation RHI)
+Condition Order = order of administration of the specific condition (1 = first condition; 2 = second condition; 3 = third condition; 4 = fourth condition)
+Group = group based on the order of administration of the location condition in the vRHI
+Condition = experimental condition 
+Time = assessment time
+Illusion = illusion type
+Location = location condition
+Q1 = embodiment questionnaire, item 1
+Q10 = embodiment questionnaire, item 10
+Q11 = embodiment questionnaire, item 11
+Q12 = embodiment questionnaire, item 12
+Q13 = embodiment questionnaire, item 13
+Q14 = embodiment questionnaire, item 14
+Q15 = embodiment questionnaire, item 15
+Q16 = embodiment questionnaire, item 16
+Q17 = embodiment questionnaire, item 17
+Q17r = embodiment questionnaire, item 17 reversed
+Q18 = embodiment questionnaire, item 18
+Q2 = embodiment questionnaire, item 2
+Q3 = embodiment questionnaire, item 3
+Q4 = embodiment questionnaire, item 4
+Q5 = embodiment questionnaire, item 5
+Q6 = embodiment questionnaire, item 6
+Q7 = embodiment questionnaire, item 7
+Q8 = embodiment questionnaire, item 8
+Q9 = embodiment questionnaire, item 9
+Embodiment = embodiment score (average of items 
+Disembodiment  = disembodiment score (average of items 
+Physic = physic sensation score (average of items 
+PointingRating = pointing precision assessment
+SCR.PP = Skin Conductance Response peak to peak
+Prop.drift1 = proprioceptive drift (difference between the estimated body's position and the real position of the body), pointing 1
+Prop.drift2 = proprioceptive drift (difference between the estimated body's position and the real position of the body), pointing 2
+Prop.drift3 = proprioceptive drift (difference between the estimated body's position and the real position of the body), pointing 3
+Prop.drift4 = proprioceptive drift (difference between the estimated body's position and the real position of the body), pointing 4
+Prop.drift5 = proprioceptive drift (difference between the estimated body's position and the real position of the body), pointing 5
+Prop.drift6 = proprioceptive drift (difference between the estimated body's position and the real position of the body), pointing 6
+Prop.drift7 = proprioceptive drift (difference between the estimated body's position and the real position of the body), pointing 7
+Prop.drift8 = proprioceptive drift (difference between the estimated body's position and the real position of the body), pointing 8
+Prop.drift9 = proprioceptive drift (difference between the estimated body's position and the real position of the body), pointing 9
+Prop.drift10 = proprioceptive drift (difference between the estimated body's position and the real position of the body), pointing 10
+Prop.drift.M = mean proprioceptive drift (average of pointing 1 to 10)
+Virt.drift1 = virtual drift (difference between the estimated body's position and the avatar's position), pointing 1
+Virt.drift2 = virtual drift (difference between the estimated body's position and the avatar's position), pointing 2
+Virt.drift3 = virtual drift (difference between the estimated body's position and the avatar's position), pointing 3
+Virt.drift4 = virtual drift (difference between the estimated body's position and the avatar's position), pointing 4
+Virt.drift5 = virtual drift (difference between the estimated body's position and the avatar's position), pointing 5
+Virt.drift6 = virtual drift (difference between the estimated body's position and the avatar's position), pointing 6
+Virt.drift7 = virtual drift (difference between the estimated body's position and the avatar's position), pointing 7
+Virt.drift8 = virtual drift (difference between the estimated body's position and the avatar's position), pointing 8
+Virt.drift9 = virtual drift (difference between the estimated body's position and the avatar's position), pointing 9
+Virt.drift10 = virtual drift (difference between the estimated body's position and the avatar's position), pointing 10
+Virt.drift.M = mean virtual drift (average of pointing 1 to 10)
+Virt.drift.se = virtual drift standard error
+Virt.drift = virtual drift composite score
+
+
+-dt2.noout codebook-
+
+Illusion = illusion type
+Pointing
+Trial = pointing trial number (from 1 to 10 in each condition)
+Offset.Value = shift between the virtual and real bodies' positions
+VirtualPosition = location (on the longitudinal axis) of the virtual left hand/leg
+ID = subject's id
+Location = location condition
+Prop.drift = difference between the estimated body's position and the real position of the body
+Virt.drift = difference between the estimated body's position and the avatar's position
+Time = assessment time
+
