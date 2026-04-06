@@ -1,0 +1,76 @@
+#' Introductory Physics Supplemental Instruction Data
+#'
+#' A student-level dataset derived from the supplemental data accompanying
+#' Burkholder, Salehi, and Wieman (2021), which studied optional supplemental
+#' instruction courses in introductory mechanics and electricity and magnetism
+#' at Stanford University. The data support ordinary least squares analyses of
+#' final-exam performance and are also suitable for examples involving missing
+#' data, since several preparation variables are incomplete.
+#'
+#' The paper analyzes two closely related course settings:
+#' \itemize{
+#'   \item \strong{Phys 1 / Phys 1A} (mechanics and its supplemental course), and
+#'   \item \strong{Phys 2 / Phys 2A} (electricity and magnetism and its supplemental course).
+#' }
+#'
+#' In the raw supplemental files, variable names are not completely standardized
+#' across years. For example, the mechanics concept inventory may appear as
+#' `preFMCE`, `pre.fmce`, or `fmce_pre`, and the final-exam variable may appear
+#' as `FinalExam`, `final.Exam`, `Phys1Final`, or `Phys2Final` depending on the
+#' course and file. This documentation is written for a cleaned, package-ready
+#' version with consistent names.
+#'
+#' The variable `Percentile` appears in the supplemental files as a measure of
+#' prior mathematics preparation. In the article, the corresponding predictor is
+#' described as SAT/ACT math score. The public paper does not spell out the exact
+#' coding used to produce `Percentile`, so it is safest to describe it as a
+#' percentile-like or rank-based preparation measure derived from SAT/ACT math.
+#'
+#' @format A data frame with one row per student and the following variables:
+#' \describe{
+#'   \item{ID}{Student identifier.}
+#'   \item{Freshmen}{Indicator for first-year student status; typically coded 1 for freshman and 0 otherwise.}
+#'   \item{Percentile}{Percentile-like measure of prior mathematics preparation, corresponding to the SAT/ACT math preparation control used in the article. Exact coding is not documented in the public paper.}
+#'   \item{Phys1A}{Indicator for enrollment in the supplemental instruction course accompanying introductory mechanics.}
+#'   \item{Phys2A}{Indicator for enrollment in the supplemental instruction course accompanying introductory electricity and magnetism.}
+#'   \item{VectorCalcPrior}{Indicator for prior exposure to vector calculus before taking Phys 2.}
+#'   \item{preFMCE}{Force and Motion Conceptual Evaluation (FMCE) pretest score. In some source files this appears as `pre.fmce` or `fmce_pre`.}
+#'   \item{csem_pre}{Conceptual Survey of Electricity and Magnetism (CSEM) pretest score.}
+#'   \item{FinalExam}{Mechanics final-exam score. In cleaned versions, this usually corresponds to Phys 1. In some source files this appears as `final.Exam` or `Phys1Final`.}
+#'   \item{Phys1Final}{Introductory mechanics final-exam score. Included explicitly in some files, especially those used in Phys 2 regressions as a prior-performance control.}
+#'   \item{Phys2Final}{Introductory electricity and magnetism final-exam score.}
+#'   \item{MC}{Multiple-choice component of the Phys 2 final exam.}
+#'   \item{FR}{Free-response component of the Phys 2 final exam.}
+#' }
+#'
+#' @details
+#' The published article uses multiple linear regression to estimate whether the
+#' supplemental instruction courses Phys 1A and Phys 2A are associated with final
+#' exam performance after adjusting for prior preparation. The primary analyses
+#' reported in the paper correspond roughly to the following outcomes and control
+#' sets:
+#' \itemize{
+#'   \item \strong{Mechanics models:} final exam in Phys 1 as a function of FMCE pretest,
+#'   math preparation (`Percentile`), and Phys 1A participation.
+#'   \item \strong{Electricity and magnetism models:} final exam in Phys 2 as a function
+#'   of FMCE pretest, CSEM pretest, math preparation (`Percentile`), prior vector
+#'   calculus, and Phys 2A participation.
+#'   \item \strong{Expanded Phys 2 models:} the same Phys 2 outcome with Phys 1 final exam
+#'   added as an additional predictor.
+#' }
+#'
+#' Because the dataset contains missing values in several preparation variables,
+#' it can also be used for teaching examples involving complete-case analysis,
+#' multiple imputation, and sensitivity to missing-data assumptions.
+#'
+#' @source
+#' Burkholder, E., Salehi, S., & Wieman, C. E. (2021).
+#' \emph{Mixed results from a multiple regression analysis of supplemental
+#' instruction courses in introductory physics}. PLOS ONE, 16(4), e0249086.
+#' \doi{10.1371/journal.pone.0249086}. Data files are provided as supporting
+#' information with the article.
+#'
+#' @examples
+#' data(physics)
+#' summary(physics)
+"physics"
