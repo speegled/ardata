@@ -1,11 +1,10 @@
 Package: ardata
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Data for Applied Regression
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Darrin Speegle
+Maintainer: Darrin Speegle <speegled@slu.edu>
+Description: Data sets that can be used with regression
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
