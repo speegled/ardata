@@ -17,14 +17,14 @@ dd |>
   mutate(date = lubridate::ymd(date)))
 
 dd <- dd |> 
-  mutate(dow = lubridate::wday(date, label = T),
-         month = lubridate::month(date, label = T)) 
+  mutate(dow = factor(lubridate::wday(date, label = T), ordered = F),
+         month = factor(lubridate::month(date, label = T), ordered = F)) 
 dd <- dd |> 
   mutate(school_year = factor(school_year))
 summary(dd)
 dd <- dd[complete.cases(dd),]
 summary(dd)
-
+dd
 unique(dd$school_dbn)
 dd <- dd %>%
   mutate(
@@ -40,6 +40,45 @@ dd <- dd %>%
     )
   )
 
+set.seed(20260406)
+
+# one row per school, excluding District 75
+school_frame <- dd %>%
+  distinct(school_dbn, district, borough) %>%
+  filter(district != "75")
+
+# proportional allocation of 100 schools across boroughs
+alloc <- school_frame %>%
+  count(borough, name = "N_borough") %>%
+  mutate(
+    raw_n = 100 * N_borough / sum(N_borough),
+    n_sample = floor(raw_n),
+    remainder = raw_n - n_sample
+  ) %>%
+  arrange(desc(remainder)) %>%
+  mutate(
+    n_sample = n_sample + if_else(
+      row_number() <= 100 - sum(n_sample),
+      1L,
+      0L
+    )
+  ) %>%
+  select(borough, n_sample)
+
+# sample schools within each borough, then keep all rows for those schools
+sampled_schools <- school_frame %>%
+  left_join(alloc, by = "borough") %>%
+  group_split(borough) %>%
+  purrr::map_dfr(~ dplyr::slice_sample(.x, n = .x$n_sample[1])) %>%
+  select(school_dbn)
+
+dd_sample <- dd %>%
+  filter(district != "75") %>%
+  semi_join(sampled_schools, by = "school_dbn")
+
+dd <-  dd_sample
+
+dd
 summary(dd)
 head(dd)
 tail(dd)
@@ -86,6 +125,9 @@ dd_sample <- dd %>%
   semi_join(sampled_schools, by = "school_dbn")
 
 dd <- dd_sample
+
+attendance <- dd
+save(attendance,file = "data/attendance.rda")
 
 dd <- dd |> 
   filter(enrolled > 0)
