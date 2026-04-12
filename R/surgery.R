@@ -1,0 +1,123 @@
+#' Spinal anesthesia cohort for lower-limb fracture surgery
+#'
+#' This dataset comes from the supporting information for Tian et al. (2025),
+#' a retrospective cohort study comparing ultrasound-assisted median and
+#' paramedian spinal anesthesia approaches in patients with lower-limb fractures.
+#'
+#' The variable names documented here assume the original CSV column names have
+#' already been standardized with `janitor::clean_names()`.
+#'
+#'
+#' @format A data frame with 146 rows and 23 variables:
+#' \describe{
+#'   \item{identification_code}{Unique anonymized patient identifier. This should
+#'   usually be treated as an identifier rather than as an analytic variable. The
+#'   helper function `clean_spinal_anesthesia_data()` converts it to character to
+#'   reduce the risk of using it as a numeric predictor.}
+#'
+#'   \item{sex}{Patient sex. In the article's regression table, the two categories
+#'   are reported as male and female. Recommended factor coding:
+#'   `Male`, `Female`.}
+#'
+#'   \item{age}{Age in years. Numeric.}
+#'
+#'   \item{height}{Height in centimeters. Numeric.}
+#'
+#'   \item{bmi_kg_m2}{Body mass index in kilograms per square meter. Numeric.}
+#'
+#'   \item{asa_score}{ASA classification recorded in two categories. The paper's
+#'   regression table reports these as `I-II` versus `III`. Recommended factor
+#'   coding: `ASA I-II`, `ASA III`.}
+#'
+#'   \item{time_before_surgery}{Preoperative waiting time in days. Numeric. The
+#'   paper refers to this as waiting time before surgery.}
+#'
+#'   \item{low_back_pain}{History of low back pain before the procedure.
+#'   Recommended factor coding: `No`, `Yes`.}
+#'
+#'   \item{rheumatoid_arthritis}{History of rheumatoid arthritis. Recommended
+#'   factor coding: `No`, `Yes`.}
+#'
+#'   \item{history_of_surgical_anesthesia}{Whether the patient had prior surgical
+#'   anesthesia. Recommended factor coding: `No`, `Yes`.}
+#'
+#'   \item{physical_activity}{Pre-injury physical activity level. The paper's
+#'   regression table reports the categories as `Mild-Moderate` and `Severe`.
+#'   Recommended factor coding: `Mild-Moderate`, `Severe`.}
+#'
+#'   \item{first_pass_success}{Whether dural puncture was successful on the first
+#'   attempt. Recommended factor coding: `No`, `Yes`. This is the primary outcome
+#'   in the article.}
+#'
+#'   \item{number_of_attempts}{Number of puncture attempts, taking values 1, 2,
+#'   or 3. This can be kept numeric as a count, though in descriptive work it can
+#'   also be treated as an ordered categorical variable.}
+#'
+#'   \item{total_operation_time}{Total operation time in seconds, as labeled in
+#'   the CSV. Numeric. In the paper's baseline table, a similarly scaled variable
+#'   is reported in seconds.}
+#'
+#'   \item{vas_score}{Pain intensity measured on a visual analog scale (VAS).
+#'   Numeric score.}
+#'
+#'   \item{nrs_score}{Comfort rating measured on a numerical rating scale (NRS).
+#'   Numeric score.}
+#'
+#'   \item{satisfaction}{Degree of satisfaction. Recommended factor coding:
+#'   `No`, `Yes`.}
+#'
+#'   \item{dysesthesia}{Needle sensation / dysesthesia during puncture.
+#'   Recommended factor coding: `No`, `Yes`.}
+#'
+#'   \item{puncture_method}{Spinal anesthesia approach. In the article the two
+#'   groups are the `Median group` and the `Paramedian group`. Recommended factor
+#'   coding: `Median`, `Paramedian`. This is the primary exposure for the homework
+#'   assignment.}
+#'
+#'   \item{postoperative_low_back_pain}{Whether postoperative low back pain was
+#'   reported. Recommended factor coding: `No`, `Yes`.}
+#'
+#'   \item{postoperative_headache}{Whether postoperative headache was reported.
+#'   Recommended factor coding: `No`, `Yes`.}
+#'
+#'   \item{fracture_type}{Type of fracture. The article reports the categories as
+#'   `Distal lower limb` and `Proximal lower limb`. Recommended factor coding:
+#'   `Distal lower limb`, `Proximal lower limb`.}
+#'
+#'   \item{anesthesiologist}{Anesthesiologist identifier. The article reports
+#'   these as `A`, `B`, `C`, and `D`. Recommended factor coding:
+#'   `A`, `B`, `C`, `D`.}
+#' }
+#'
+#' @source
+#' Tian C, Xue J, Cui H, Ding H (2025). "Association of ultrasound-assisted
+#' combined with conventional anatomical landmark paramedian spinal anesthesia
+#' and its impact on first pass success rate in patients with lower limb
+#' fractures- A retrospective cohort study." \emph{PLOS ONE}, 20(10), e0334455.
+#' Supporting data file: \doi{10.1371/journal.pone.0334455.s001}.
+#'
+#' @references
+#' Tian C, Xue J, Cui H, Ding H (2025). "Association of ultrasound-assisted
+#' combined with conventional anatomical landmark paramedian spinal anesthesia
+#' and its impact on first pass success rate in patients with lower limb
+#' fractures- A retrospective cohort study." \emph{PLOS ONE}, 20(10), e0334455.
+#' \doi{10.1371/journal.pone.0334455}
+"surgery"
+
+
+#' Clean and relabel the spinal anesthesia cohort data
+#'
+#' This helper applies the factor conversions suggested in the dataset
+#' documentation for `spinal_anesthesia`. It assumes the data have already been
+#' read into R and that the column names already match the output of
+#' `janitor::clean_names()` on the original CSV.
+#'
+#' @param data A data frame containing the spinal anesthesia cohort data with
+#'   cleaned column names.
+#'
+#' @return
+#' A tibble in which identifiers are protected and the main categorical variables
+#' have been converted to factors with readable labels.
+#'
+#' @export
+#'
