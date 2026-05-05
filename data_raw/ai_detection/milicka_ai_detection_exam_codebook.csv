@@ -1,0 +1,26 @@
+variable,description
+participant_id,Participant identifier; each participant contributes 17 non-control trials.
+feedback_condition,Experimental condition: feedback = immediate feedback after each trial; no_feedback = no immediate feedback until the end.
+got_feedback,Logical version of feedback_condition.
+trial_order,Original trial order number from the experiment after control questions have been removed; values may skip numbers because control questions were removed.
+trial_sequence,Simplified sequential trial number from 1 to 17 within participant after control questions have been removed.
+correct,Binary outcome: 1 if participant correctly identified which text was human-written and which was AI-generated; 0 otherwise.
+confidence,Participant confidence rating on a 1–7 scale.
+more_readable_is_human,1 if the participant judged the human-written text to be more readable; 0 otherwise.
+reaction_time_ms,Trial reaction time in milliseconds.
+reaction_time_log2,Base-2 logarithm of reaction time in milliseconds.
+correctness_total,Total number of correct responses for the participant across 17 non-control trials.
+age,Participant age.
+gender,"Participant gender response, simplified as reported in the Jamovi data."
+education_ordinal,Ordinal coding of education level used by the authors.
+ai_usage_ordinal,Ordinal coding of frequency of AI/LLM use used by the authors.
+reading_disorder,"Whether the participant reported a reading disorder, after the authors merged unknown with false."
+stylometric_distance,Euclidean distance between the human and AI text pair on the authors’ stylometric dimensions.
+dim1_difference,"Difference between AI and human text on stylometric dimension 1, computed as AI minus human in the authors’ data."
+dim2_difference,"Difference between AI and human text on stylometric dimension 2, computed as AI minus human in the authors’ data."
+dim3_difference,"Difference between AI and human text on stylometric dimension 3, computed as AI minus human in the authors’ data."
+dim4_difference,"Difference between AI and human text on stylometric dimension 4, computed as AI minus human in the authors’ data."
+dim5_difference,"Difference between AI and human text on stylometric dimension 5, computed as AI minus human in the authors’ data."
+dim6_difference,"Difference between AI and human text on stylometric dimension 6, computed as AI minus human in the authors’ data."
+dim7_difference,"Difference between AI and human text on stylometric dimension 7, computed as AI minus human in the authors’ data."
+dim8_difference,"Difference between AI and human text on stylometric dimension 8, computed as AI minus human in the authors’ data."
